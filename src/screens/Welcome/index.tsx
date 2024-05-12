@@ -1,11 +1,12 @@
+import {Box} from 'native-base';
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
 
 const Index = () => {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>WELCOME</Text>
-    </View>
+    <Box>
+      <Text>Hello, it works</Text>
+    </Box>
   );
 };
 
