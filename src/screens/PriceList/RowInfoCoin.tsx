@@ -15,9 +15,9 @@ const RowInfoCoin = ({info}: {info: PriceListItem}) => {
   return (
     <Box>
       <TouchableOpacity onPress={onPressCoin}>
-        <HStack pb={'10px'} color={'white'}>
+        <HStack pb={'10px'} alignItems={'center'}>
           <Text flex={1}>{info?.name}</Text>
-          <Text pr={'10px'}>{info?.price.toString()}</Text>
+          <Text pr={'10px'}>{info?.price?.toString()}</Text>
           <PriceChangeTag number={info.change} type={info.changeType} />
         </HStack>
       </TouchableOpacity>

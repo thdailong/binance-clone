@@ -21,9 +21,14 @@ const PriceChangeTag = ({
   };
 
   return (
-    <Box bgColor={typeTag[type].color} px={'10px'} py={'6px'}>
+    <Box
+      bgColor={typeTag?.[type]?.color}
+      px={'10px'}
+      py={'6px'}
+      w={'70px'}
+      borderRadius={'4px'}>
       <Text color={'white'}>
-        {typeTag[type].prefix} {number.toString()}%
+        {typeTag?.[type]?.prefix} {number?.toString()}%
       </Text>
     </Box>
   );

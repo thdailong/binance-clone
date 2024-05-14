@@ -11,12 +11,17 @@ const Header = ({title, children}: {title: string; children?: any}) => {
   };
 
   return (
-    <Box bgColor={'white'}>
+    <Box bgColor={'appColors.background'} px={'20px'} py={'16px'}>
       <HStack alignItems={'center'}>
         <TouchableOpacity onPress={onIconPress}>
-          <ArrowBackIcon />
+          <ArrowBackIcon size={'24px'} />
         </TouchableOpacity>
-        <Text color={'white'} flex={1}>
+        <Text
+          color={'white'}
+          flex={1}
+          ml={'10px'}
+          fontSize={16}
+          fontWeight={600}>
           {title}
         </Text>
         {children}

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Header from '../../components/Header';
-import {Box, HStack, ScrollView, Text} from 'native-base';
+import {Box, FlatList, HStack, Text} from 'native-base';
 import {PriceListItem} from '../../Constants/Type';
 import {Alert} from 'react-native';
 import {PriceTagEnum} from '../../Constants/Enum';
@@ -43,16 +43,20 @@ const Index = () => {
   return (
     <>
       <Header title="Price List" />
-      <Box flex={1} bgColor={'black'} px={'20px'}>
+      <Box flex={1} bgColor={'appColors.background'} px={'20px'}>
         <HStack color={'white'}>
-          <Text flex={1}>Name</Text>
-          <Text pr={'20px'}>Recent Price</Text>
-          <Text>Changed</Text>
+          <Text color={'gray.300'} flex={1}>
+            Name
+          </Text>
+          <Text color={'gray.300'} pr={'20px'}>
+            Recent Price
+          </Text>
+          <Text color={'gray.300'}>Changed</Text>
         </HStack>
-        <ScrollView flex={1}>
-          {list.length > 0 &&
-            list.map((item, index) => <RowInfoCoin info={item} key={index} />)}
-        </ScrollView>
+        <FlatList
+          data={list}
+          renderItem={({item}) => <RowInfoCoin info={item} />}
+        />
       </Box>
     </>
   );

@@ -3,12 +3,13 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {Box, Text} from 'native-base';
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
+import {AppPath} from '../../Constants';
 
 const Index = () => {
   const navigation = useNavigation<NativeStackNavigationProp<any>>();
 
   const onGoTopPriceList = () => {
-    navigation.navigate('PriceList');
+    navigation.navigate(AppPath.PriceList);
   };
 
   return (
