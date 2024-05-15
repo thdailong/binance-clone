@@ -14,10 +14,13 @@ const Index = () => {
 
   return (
     <>
-      <Box bgColor={'black'}>
-        <Text color={'white'}>Hello, it works</Text>
+      <Box bgColor={'appColors.background'} flex={1}>
+        {/* <Tab.Navigator>
+          <Tab.Screen name={AppPath.Home} component={Welcome} />
+        </Tab.Navigator> */}
+        <Text>Hello, it works</Text>
         <TouchableOpacity onPress={onGoTopPriceList}>
-          <Text color={'white'}>Click here to view price list</Text>
+          <Text>Click here to view price list</Text>
         </TouchableOpacity>
       </Box>
     </>
